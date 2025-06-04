@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run with input file",
+      "type": "process",
+      "command": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": [
+        "-l", "-c",
+      "gcc \"${fileBasename}\" -g -o \"${fileBasenameNoExtension}.exe\" && \"./${fileBasenameNoExtension}.exe\" < input.as"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
